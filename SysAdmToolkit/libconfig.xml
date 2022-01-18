@@ -1,0 +1,84 @@
+<?xml version='1.0' standalone='yes' ?>
+<libconfig>
+	<os>
+		<osname>
+			<name>AIX</name>
+			<cmd>uname -s</cmd>
+			<cmds>uname</cmds>
+		</osname>
+		<osversion>
+			<version></version>
+			<cmd></cmd>
+			<cmds></cmds>
+		</osversion>
+	</os>
+	<os>
+		<osname>
+			<name>HP-UX</name>
+			<cmd>uname -s</cmd>
+			<cmds>uname</cmds>
+		</osname>
+		<osversion>
+			<version>11.11,11.23,11.31</version>
+			<cmd>uname -r|awk -F&apos;.&apos; &apos;{print $2 &quot;.&quot; $3}&apos;</cmd>
+			<cmds>uname</cmds>
+			<cmds>awk</cmds>
+		</osversion>
+	</os>
+	<os>
+		<osname>
+			<name>Solaris</name>
+			<cmd>uname -s</cmd>
+			<cmds>uname</cmds>
+		</osname>
+		<osversion>
+			<version>8,9,10,11</version>
+			<cmd></cmd>
+			<cmds></cmds>
+		</osversion>
+	</os>
+	<os>		
+		<osname>
+			<name>Red Hat</name>
+			<cmd>cat /etc/redhat-release|awk &apos;{print $1&quot; &quot;$2}&apos;</cmd>
+			<cmds>cat</cmds>
+			<cmds>awk</cmds>
+		</osname>
+		<osversion>
+			<version>5,5.8,5.9,5.10,6.1,6.2,6.3,6.4,6.5</version>
+			<cmd>cat /etc/redhat-release|awk &apos;{print $7}&apos;</cmd>
+			<cmds>cat</cmds>
+			<cmds>awk</cmds>
+		</osversion>
+	</os>
+	<os>		
+		<osname>
+			<name>Ubuntu</name>
+			<cmd>cat /etc/lsb-release|grep DISTRIB_ID|cut -d "=" -f 2</cmd>
+			<cmds>cat</cmds>
+			<cmds>grep</cmds>
+			<cmds>cut</cmds>
+		</osname>
+		<osversion>
+			<version>10.10,11.10,12.04,14.04</version>
+			<cmd>cat /etc/lsb-release|grep DISTRIB_RELEASE|cut -d &quot;=&quot; -f </cmd>
+			<cmds>cat</cmds>
+			<cmds>grep</cmds>
+			<cmds>cut</cmds>
+		</osversion>
+	</os>
+	<os>		
+		<osname>
+			<name>CentOS</name>
+			<cmd>cat /etc/redhat-release|awk &apos;{print $1}&apos;</cmd>
+			<cmds>cat</cmds>
+			<cmds>awk</cmds>
+		</osname>
+		<osversion>
+			<version>5,5.8,5.9,5.10,6.1,6.2,6.3,6.4,6.5</version>
+			<cmd>cat /etc/redhat-release|awk &apos;{print $3}&apos;</cmd>
+			<cmds>cat</cmds>
+			<cmds>awk</cmds>
+		</osversion>
+	</os>
+</libconfig>
